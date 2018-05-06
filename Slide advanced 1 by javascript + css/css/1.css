@@ -1,0 +1,114 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+}
+#slidewrapper {
+    height:  100%;
+    width:  100%;
+    position: relative;
+    overflow: hidden;
+    background:black;
+}
+#slidewrapper .buttons{
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 140px;
+	
+
+}
+
+.slides{
+	width: 100%;
+	height: 100%;
+}
+.slides ul{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.slides ul li.slide{
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	opacity: 0;
+	transition: .6s;
+}
+.slides ul li.slide.present{
+	opacity: 1;
+}
+.slides ul li.slide.active{
+	animation: showMoveLeft .6s ease-in-out forwards;
+}
+.slides ul li.slide.hidden{
+	animation: unshowMoveLeft .6s ease-in-out forwards;
+
+}
+@-webkit-keyframes showon{
+	from{transform: scale(0.7);opacity: 0}
+	to{transform: scale(1);opacity: 1}
+}
+
+@-webkit-keyframes unshow{
+	from{transform: scale(1);opacity: 1}
+	to{transform: scale(2);opacity: 0}
+}
+
+
+.slides ul li.slide.activePre{
+	animation: showMoveRight 1s ease-in-out forwards;
+	
+
+}
+.slides ul li.slide.hiddenPre{
+	animation: unshowMoveRight 1s ease-in-out forwards;
+	}
+@-webkit-keyframes showonpre{
+	from{transform: scale(2);opacity: 0}
+	to{transform: scale(1);opacity: 1}
+}
+@-webkit-keyframes unshowpre{
+	from{transform: scale(1);opacity: 1}
+	to{transform: scale(0.7);opacity: 0}
+}
+
+@-webkit-keyframes unshowMoveLeft{
+	0% {transform: translateX(0px);opacity: 1}
+	40% {transform: translateX(30%);opacity: 0.9}
+	100% {transform: translateX(-100%);opacity: 0.7}
+}
+
+@-webkit-keyframes showMoveLeft{
+	0% {transform: translateX(100%);opacity: 0.7}
+	40% {transform: translateX(100%);opacity: 0.9}
+	100% {transform: translateX(0%);opacity: 1}
+}
+
+@-webkit-keyframes unshowMoveRight{
+	from{transform: translateX(0px);opacity: 1}
+	to{transform: translateX(100%);opacity: 0.7}
+}
+
+@-webkit-keyframes showMoveRight{
+	from{transform: translateX(-100%);opacity: 0.7}
+	to{transform: translateX(0);opacity: 1}
+}
+
+.buttons a {
+    color: #3a3434;
+    padding: 0px 14px;
+
+}
+
+.buttons a:hover {
+    color: gray;
+}

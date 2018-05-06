@@ -1,0 +1,42 @@
+.big{
+	width: 200px;
+	height: 200px;
+	perspective: 500px;
+}
+.small{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	transform-style: preserve-3d;
+
+}
+.small div{
+	width: 200px;
+	height: 200px;
+	background: rgba(0,0,0,.4);
+	color: white;
+	line-height: 200px;
+	text-align: center;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+._khoi1{
+	transform: translateZ(100px);
+}
+._khoi2{
+	transform: rotateY(-90deg) translateZ(100px);
+}
+._khoi3{
+	transform: rotateY(90deg) translateZ(100px);
+}
+._khoi4{
+	transform: rotateX(-90deg) translateZ(100px);
+}
+._khoi5{
+	transform: rotateX(90deg) translateZ(100px);
+}
+._khoi6{
+	transform: translateZ(-100px);
+}
